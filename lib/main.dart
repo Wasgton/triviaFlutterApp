@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/inicial_screen.dart';
+import 'pages/initial_screen/inicial_screen.dart';
 
 void main(){
   runApp(Trivia());

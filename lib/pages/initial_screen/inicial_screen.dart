@@ -1,38 +1,31 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'trivia_screen.dart';
+import '../trivia_screen/trivia_screen.dart';
 
 class InitialScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-
-      child: Column(
+      child: Container(
+        margin: EdgeInsets.fromLTRB(0, 167, 0, 88),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            SizedBox(
-              height: 167.0,
-            ),
-            Image(
-                image: AssetImage('lib/assets/images/logo.png'),
-            ),
-            SizedBox(
-              height: 24.0,
-            ),
-            Text('Trivia\nAcademy',
-                 textAlign: TextAlign.center,
-                 style: TextStyle(
-                    fontSize: 32,
-                    fontWeight: FontWeight.w800,
-                    fontStyle: FontStyle.normal,
-                 ),
-            ),
-            SizedBox(
-              height: 24.0,
+            Image.asset('lib/assets/images/logo.png'),
+            Text('Trivia\nacademy',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 32,
+                height: 1.2,
+                fontWeight: FontWeight.w800,
+                fontStyle: FontStyle.normal,
+              ),
             ),
             FlatButton(
               onPressed: (){
                 Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context)=> TriviaScreen())
+                    context,
+                    MaterialPageRoute(builder: (context)=> TriviaScreen())
                 );
               },
               child: Text(
@@ -48,8 +41,9 @@ class InitialScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
               padding: EdgeInsets.fromLTRB(60, 11, 60, 11),
-            )
+            ),
           ],
+        ),
       ),
     );
   }
