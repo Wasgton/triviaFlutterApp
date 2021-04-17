@@ -6,8 +6,8 @@ class InitialScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Container(
-        margin: EdgeInsets.fromLTRB(0, 167, 0, 88),
+      child: Expanded(
+        // margin: EdgeInsets.fromLTRB(0, 167, 0, 88),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -31,9 +31,9 @@ class InitialScreen extends StatelessWidget {
               child: Text(
                 'Começar'
                 ,style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w600
-              ),
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600
+                ),
               ),
               color: Color(0xffDA0175),
               textColor: Color(0xffF7F7F7),
